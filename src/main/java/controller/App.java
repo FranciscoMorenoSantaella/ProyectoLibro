@@ -20,9 +20,11 @@ public class App extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        scene = new Scene(loadFXML("primary"), 640, 480);
+        scene = new Scene(loadFXML("EditScreen"), 900, 600);
         stage.setScene(scene);
         stage.show();
+        stage.getIcons().add(new Image(Objects.requireNonNull(App.class.getResourceAsStream("pergamino.png"))));
+
     }
 
     static void setRoot(String fxml) throws IOException {
@@ -34,7 +36,7 @@ public class App extends Application {
         stage.setScene(s);
         stage.initModality(Modality.APPLICATION_MODAL);
         stage.setTitle(title);
-      //  stage.getIcons().add(new Image(Objects.requireNonNull(App.class.getResourceAsStream("iconoDisco.png"))));
+       stage.getIcons().add(new Image(Objects.requireNonNull(App.class.getResourceAsStream("pergamino.png"))));
       //  stage.getScene().getStylesheets().add(String.valueOf(App.class.getResource("estilos.css")));
 
         stage.showAndWait();
